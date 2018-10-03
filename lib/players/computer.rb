@@ -17,24 +17,27 @@ module Players
         position_1 = board.cells[current_combo[0]]
         position_2 = board.cells[current_combo[1]]
         position_3 = board.cells[current_combo[2]]
-        if position_1 == "X" && position_2 == "X"
-          return position_3.to_s
-        elsif position_1 == "O" && position_2 == "O"
-          return position_3.to_s
-        elsif position_1 == "X" && position_3 == "X"
-          return position_2.to_s
-        elsif position_1 == "O" && position_3 == "O"
-          return position_2.to_s
-        elsif position_3 == "X" && position_2 == "X"
-          return position_1.to_s
-        elsif position_3 == "O" && position_2 == "O"
-          return position_1.to_s
+        current_combo[0] += 1
+        current_combo[1] += 1
+        current_combo[2] += 1
+        if position_1 == "X" && position_2 == "X" && position_3 == " "
+          return current_combo[2].to_s
+        elsif position_1 == "O" && position_2 == "O" && position_3 == " "
+          return current_combo[2].to_s
+        elsif position_1 == "X" && position_3 == "X" && position_2 == " "
+          return current_combo[1].to_s
+        elsif position_1 == "O" && position_3 == "O" && position_2 == " "
+          return current_combo[1].to_s
+        elsif position_3 == "X" && position_2 == "X" && position_1 == " "
+          return current_combo[0].to_s
+        elsif position_3 == "O" && position_2 == "O" && position_1 == " "
+          return current_combo[0].to_s
         elsif position_1 == " "
-          return position_1.to_s
+          return current_combo[0].to_s
         elsif position_2 == " "
-          return position_2.to_s
+          return current_combo[1].to_s
         elsif position_3 == " "
-          return position_3.to_s
+          return current_combo[2].to_s
         end
       end
     end
