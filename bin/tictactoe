@@ -33,3 +33,4 @@ while command != 'exit'
   puts "Do you want to play another game?  Or type 'exit' to quit."
   command = gets.strip
 end
+puts "Thanks for playing.  Goodbye!"
