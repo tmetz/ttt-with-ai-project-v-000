@@ -9,15 +9,15 @@ command = ""
       command = gets.strip
       case command
       when "0"
-        new_game = Game.new(Players::Computer.new, Players::Computer.new)
+        new_game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
       when "1"
-        new_game = Game.new(Players::Human.new, Players::Computer.new)
+        new_game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
       when "2"
-        new_game = Game.new(Players::Human.new, Players::Human.new)
+        new_game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
       else
         puts "That is not a valid option"
       end
       new_game.play
-  
+
     end
 play(board)
