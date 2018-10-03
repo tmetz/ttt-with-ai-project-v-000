@@ -75,6 +75,7 @@ class Game
     end
     @board.update(square, current_player)
     @board.display
+    puts "\n\n"
     current_player
   end
 
