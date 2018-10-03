@@ -30,6 +30,7 @@ command = ""
         puts "That is not a valid option"
       end
       new_game.play
-
+      puts "Do you want to play another game?  Or type 'exit' to quit."
+      command = gets.strip
     end
 play(board)
