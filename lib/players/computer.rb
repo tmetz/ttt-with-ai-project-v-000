@@ -14,7 +14,8 @@ module Players
     ]
     def move(board)
       if board.cells[4] == " "
-        return "4"
+        return "5"
+      end
       WIN_COMBINATIONS.each do |current_combo|
         position_1 = board.cells[current_combo[0]]
         position_2 = board.cells[current_combo[1]]
