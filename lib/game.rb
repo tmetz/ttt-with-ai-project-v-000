@@ -71,6 +71,7 @@ class Game
   def turn
     square = current_player.move(@board)
     while !@board.valid_move?(square)
+      puts "That is not a valid move, please try again: "
       square = current_player.move(@board)
     end
     @board.update(square, current_player)
