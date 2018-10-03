@@ -28,13 +28,13 @@ module Players
           return current_combo[2].to_s
         elsif position_1 == "O" && position_2 == "O" && position_3 == " "
           return current_combo[2].to_s
-        elsif position_1 == "X" && position_3 == "X" && position_2 == " "
-          return current_combo[1].to_s
         elsif position_1 == "O" && position_3 == "O" && position_2 == " "
           return current_combo[1].to_s
-        elsif position_3 == "X" && position_2 == "X" && position_1 == " "
+        elsif position_1 == "X" && position_3 == "X" && position_2 == " "
+          return current_combo[1].to_s
+        if position_1 == " " && position_2 == "X" && position_3 == "X"
           return current_combo[0].to_s
-        elsif position_3 == "O" && position_2 == "O" && position_1 == " "
+        elsif position_1 == " " && position_2 == "O" && position_3 == "O"
           return current_combo[0].to_s
         elsif position_1 == " "
           return current_combo[0].to_s
