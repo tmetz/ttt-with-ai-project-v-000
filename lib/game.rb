@@ -74,6 +74,7 @@ class Game
       square = current_player.move(@board)
     end
     @board.update(square, current_player)
+    @board.display
     current_player
   end
 
