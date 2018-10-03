@@ -19,7 +19,13 @@ command = ""
           new_game = Game.new(Players::Computer.new("X"), Players::Human.new("O"))
         end
       when "2"
-        new_game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
+        puts "Do you want player 1 to be X or O (enter X/O)?"
+        token = gets.strip
+        if token == "X"
+          new_game = Game.new(Players::Human.new("X"), Players::Human.new("O"))
+        else
+          new_game = Game.new(Players::Human.new("O"), Players::Human.new("X"))
+        end
       else
         puts "That is not a valid option"
       end
