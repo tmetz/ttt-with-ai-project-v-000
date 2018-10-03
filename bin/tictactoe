@@ -11,7 +11,7 @@ command = ""
       when "0"
         new_game = Game.new(Players::Computer.new("X"), Players::Computer.new("O"))
       when "1"
-        puts("Do you want to go first and be X? (y/n)")
+        puts("The player who goes first will be X.  Do you want to go first and be X? (y/n)")
         go_first = gets.strip
         if go_first == "y"
           new_game = Game.new(Players::Human.new("X"), Players::Computer.new("O"))
